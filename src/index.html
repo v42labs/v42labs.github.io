@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>v42 Labs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Play:wght@700&display=swap" rel="stylesheet">
+  <link href="./styles.scss" rel="stylesheet">
+  <script type="text/javascript">
+    function showBlock(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+    function hideBlock(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+  </script>
+</head>
+<body>
+  <main>
+    <h1>v42 Labs</h1>
+    <p>A creative venture lab building visionary entertainment experiences.</p>
+    <section id="values">
+      <ul>
+        <li onmouseover="showBlock('integrity')"
+          onmouseout="hideBlock('integrity')">Integrity</li>
+        <li onmouseover="showBlock('inclusion')"
+          onmouseout="hideBlock('inclusion')">Inclusion</li>
+        <li onmouseover="showBlock('innovation')"
+          onmouseout="hideBlock('innovation')">Innovation</li>
+        <li onmouseover="showBlock('execution')"
+          onmouseout="hideBlock('execution')">Execution</li>
+      </ul>
+      <div>
+        <div class="value" id="integrity">
+          We deliver what we promise. We own up to our mistakes.
+        </div>
+        <div class="value" id="inclusion">
+          We build for our communities, and include them in our journey forward.
+        </div>
+        <div class="value" id="innovation">
+          We introduce new ideas, not just copy the same-old.
+        </div>
+        <div class="value" id="execution">
+          We execute efficiently and get things done.
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="mailto:team@v42.space" title="Contact us">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xmlns:v="https://vecta.io/nano">
+        <path
+          d="M469.333 64H42.667C19.135 64 0 83.135 0 106.667v298.667C0 428.865 19.135 448 42.667 448h426.667C492.865 448 512 428.865 512 405.333V106.667C512 83.135 492.865 64 469.333 64zM42.667 85.333h426.667c1.572 0 2.957.573 4.432.897L271.48 270.708c-3.354 3.021-8.76 6.625-15.479 6.625s-12.125-3.604-15.49-6.635L38.228 86.232c1.478-.324 2.866-.899 4.439-.899zm-21.334 320V106.667c0-2.09.63-3.986 1.194-5.896l169.152 154.453C136.443 302.671 50.957 383.719 22.46 410.893c-.503-1.814-1.127-3.588-1.127-5.56zm448 21.334H42.667c-1.704 0-3.219-.594-4.81-.974 29.447-28.072 115.477-109.586 169.742-156.009l18.63 16.858c8.792 7.938 19.083 12.125 29.771 12.125s20.979-4.188 29.76-12.115l18.641-16.868c54.268 46.418 140.286 127.926 169.742 156.009-1.591.38-3.104.974-4.81.974zm21.334-21.334c0 1.971-.624 3.746-1.126 5.56-28.508-27.188-113.984-108.227-169.219-155.668l169.151-154.456c.564 1.91 1.194 3.807 1.194 5.897v298.667z" />
+      </svg>
+      contact us
+    </a>
+  </footer>
+</body>
+
+</html>

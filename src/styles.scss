@@ -1,0 +1,183 @@
+/* 
+Reset styles
+
+http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}    
+
+/* v42 styles */
+
+/* glow animation */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}    
+
+* {
+  transition: all linear 0.1s;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+}
+
+a,
+a:link,
+a:visited {
+  color: #666;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+
+  svg {
+    display: inline-block;
+    fill: currentColor;
+    width: 1em;
+    height: 1em;  
+    vertical-align: middle;
+    margin-right: 0.2em;
+  }
+}
+
+a:hover {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+main {
+  text-align: center;
+  vertical-align: middle;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 100px;
+  font-family: 'Play', sans-serif;
+  animation: glow 1s ease-in-out infinite alternate;      
+}
+
+p {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  width: 85%;
+  max-width: 450px;
+  padding: 0 1rem;
+  line-height: 1.5em;
+}
+
+footer {
+  position: fixed;
+  width: 100vw;
+  bottom: 0px;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+#values {
+  position: relative;
+  flex: 0;
+  text-align: center;
+  margin-top: 40px;
+  
+  ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    font-size: 80%;
+    margin: 0 0 1em;
+    &:after {
+      padding: 1em;
+      color: #999;
+      content: "/ ";
+    }
+    &:last-child:after {
+      display: none;
+    }   
+    &:hover {
+      transform: scale(1.25);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  & > div {
+    position: absolute;
+    top: 40px;
+    width: 90%;
+    left: 5%;
+    
+    & > div {
+      display: none;
+      margin: 0 auto;
+      color: #ccc;
+      border: 1px dashed #ccc;
+      border-radius: 10px;
+      padding: 1em;
+      line-height: 1.2em;
+    }
+  }
+}

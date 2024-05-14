@@ -1,0 +1,32 @@
+{
+  "name": "v42labs.github.io",
+  "private": true,
+  "version": "1.0.0",
+  "description": "v42 Labs website",
+  "scripts": {
+    "dev": "parcel --port 53000",
+    "build": "parcel build --public-url ./",
+    "pub": "yarn build && cp ./CNAME ./dist/CNAME && push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
+  },
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/v42labs/v42labs.github.io.git"
+  },
+  "keywords": [
+    "v42"
+  ],
+  "author": "Ramesh Nair <ram@hiddentao.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/v42labs/v42labs.github.io/issues"
+  },
+  "homepage": "https://github.com/v42labs/v42labs.github.io#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0",
+    "push-dir": "^0.4.1",
+    "shx": "^0.3.4"
+  }
+}
