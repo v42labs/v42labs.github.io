@@ -180,8 +180,9 @@ footer {
     left: 5%;
     
     & > div.value {
-      display: none;
-      margin: 0 auto;
+      display: block;
+      position: absolute;
+      opacity: 0;
       color: #000;
       border: 3px dashed #000;
       border-radius: 10px;
